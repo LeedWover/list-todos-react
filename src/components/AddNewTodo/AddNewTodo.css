@@ -1,0 +1,26 @@
+.NewTodo {
+  margin: 10px 0;
+}
+
+.NewTodo input {
+  display: block;
+  font-size: 20px;
+  margin: 5px auto;
+  width: 60%;
+  padding: 5px 8px;
+  border: solid 1px gray;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.NewTodo button {
+  display: block;
+  font-size: 20px;
+  background: #00aeff;
+  color: white;
+  margin: 5px auto;
+  width: 60%;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+}
