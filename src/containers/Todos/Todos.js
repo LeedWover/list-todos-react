@@ -9,7 +9,7 @@ class Todos extends Component {
     todos: [
       {
         title: 'Wash the clothes',
-        completed: false
+        completed: true
       },
       {
         title: 'Go to shopping',
@@ -28,12 +28,21 @@ class Todos extends Component {
       todos: [...this.state.todos, {
         title: this.state.newTodo,
         completed: false
-      }]
+      }],
+      newTodo: ''
     });
   } 
 
   render() {
-    console.log(this.state);
+    const list = this.state.todos.map((todo, index) => {
+      return (
+        <ListTodos
+          title={todo.title}
+          completed={todo.completed}
+          key={index}
+        />
+      )
+    });
     return (
       <div className="Todos">
         <AddNewTodo
@@ -41,7 +50,7 @@ class Todos extends Component {
           handleChange={this.handleChange}
           newTodo={this.state.newTodo}
         />
-        <ListTodos />
+        {list}
       </div>
     )
   }
